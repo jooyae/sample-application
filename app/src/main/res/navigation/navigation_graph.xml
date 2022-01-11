@@ -3,10 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@+id/mainFrameFragment">
+    app:startDestination="@+id/splashFragment">
     <fragment
         android:id="@+id/mainFrameFragment"
         android:name="org.android.reminiscencewinter.presentation.main.MainFrameFragment"
         android:label="MainFrameFragment"
         tools:layout="@layout/fragment_main_frame"/>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="org.android.reminiscencewinter.presentation.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_mainFrameFragment"
+            app:destination="@id/mainFrameFragment" />
+    </fragment>
 </navigation>
