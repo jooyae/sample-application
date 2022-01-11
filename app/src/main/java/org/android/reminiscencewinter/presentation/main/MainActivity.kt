@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.main
+package org.android.reminiscencewinter.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
