@@ -1,49 +1,92 @@
 plugins {
-    id ("com.android.application")
-    id ("kotlin-android")
+    id(Plugins.APPLICATION)
+    id(Plugins.KOTLIN_ANDROID)
+    id(Plugins.KOTLIN_KAPT)
+    id(Plugins.HILT_ANDROID_PLUGIN)
+    id(Plugins.SAFE_ARGS)
+    id(Plugins.PARCELIZE)
 }
 
 android {
-    compileSdk = (31)
+    compileSdk = ConfigData.COMPILE_SDK
 
     defaultConfig {
-        applicationId = "org.android.reminiscencewinter"
-        minSdk = (30)
-        targetSdk = (31)
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner =  "androidx.test.runner.AndroidJUnitRunner"
+        applicationId = ConfigData.APPLICATION_ID
+        minSdk= ConfigData.MIN_SDK
+        targetSdk= ConfigData.TARGET_SDK
+        versionCode = ConfigData.VERSION_CODE
+        versionName = ConfigData.VERSION_NAME
+        buildToolsVersion = ConfigData.BUILD_TOOLS
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner =  Test.TEST_INSTRUMENTATION_RUNNER
     }
 
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
         }
     }
-
     buildFeatures {
         viewBinding = true
         dataBinding = true
     }
-
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility= JavaVersion.VERSION_1_8
+        targetCompatibility= JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
 dependencies {
+    implementation(Kotlin.KOTLIN_STDLIBS)
+    implementation(AndroidX.CORE_KTX)
+    implementation(AndroidX.FRAGMENT_KTX)
+    implementation(AndroidX.ACTIVITY_KTX)
+    implementation(AndroidX.APPCOMPAT)
+    implementation (AndroidX.CONSTRAINT_LAYOUT)
+    implementation (Google.MATERIAL)
 
-    implementation ("androidx.core:core-ktx:1.7.0")
-    implementation ("androidx.appcompat:appcompat:1.4.0")
-    implementation ("com.google.android.material:material:1.4.0")
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.2")
-    testImplementation ("junit:junit:4.+")
-    androidTestImplementation ("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
+    testImplementation(Test.JUNIT)
+    androidTestImplementation(Test.AndroidTest.JUNIT_EXT)
+    androidTestImplementation(Test.AndroidTest.ESPRESSO_CORE)
+
+    implementation(DaggerHilt.HILT_ANDROID)
+    kapt(DaggerHilt.HILT_ANDROID_COMPILER)
+
+    implementation(AndroidX.Lifecycle.VIEWMODEL)
+    implementation(AndroidX.Lifecycle.LIVEDATA)
+
+    implementation(ReactiveX.RX_JAVA)
+    implementation(ReactiveX.RX_ANDROID)
+
+    implementation(AndroidX.Navigation.NAVIGATION_FRAGMENT_KTX)
+    implementation(AndroidX.Navigation.NAVIGATION_UI_KTX)
+
+
+    //OkHttp Logging Interceptor
+    implementation(Square.OKHTTP_LOGGING_INTERCEPTOR)
+
+    implementation(Square.RETROFIT)
+    implementation(Square.CONVERTER_GSON)
+    implementation(Square.ADAPTER_RXJAVA)
+    implementation(Square.GSON)
+
+    //Coil
+    implementation(Coil.COIL)
+
+    //Paging3
+    implementation(Paging3.Paging3)
+
+    //Kakao
+    implementation(KakaoSDK.V2_USER)
+
+    //Lottie
+    implementation(Lottie.LOTTIE)
+
+    implementation(Lorem.LOREM_IPSUM)
+    implementation(AndroidX.Paging.PAGING)
+    implementation(AndroidX.Paging.PAGING_RXJAVA3)
 }
