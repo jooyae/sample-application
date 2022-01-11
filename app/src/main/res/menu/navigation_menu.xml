@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/memoryFragment"
+        android:icon="@drawable/outline_card_giftcard_black_18"
+        android:title="@string/menu_memory"/>
+    <item
+        android:id="@+id/storageFragment"
+        android:icon="@drawable/outline_volunteer_activism_black_18"
+        android:title="@string/menu_storage"/>
+    <item
+        android:id="@+id/albumFragment"
+        android:icon="@drawable/outline_photo_library_black_18"
+        android:title="@string/menu_album"/>
+    <item
+        android:id="@+id/storyFragment"
+        android:icon="@drawable/outline_auto_stories_black_18"
+        android:title="@string/menu_story"/>
+</menu>

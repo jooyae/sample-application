@@ -3,4 +3,8 @@
     <string name="title_data">data</string>
     <string name="title_domain">domain</string>
     <string name="title_presentation">presentation</string>
+    <string name="menu_memory">Memory</string>
+    <string name="menu_storage">For you</string>
+    <string name="menu_album">Album</string>
+    <string name="menu_story">Story</string>
 </resources>
