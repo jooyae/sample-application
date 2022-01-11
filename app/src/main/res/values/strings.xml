@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ReminiscenceWinter</string>
     <string name="title_data">data</string>
+    <string name="title_domain">domain</string>
 </resources>
