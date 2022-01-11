@@ -1,8 +1,7 @@
 package org.android.domain
 
-import org.junit.Test
-
-import org.junit.Assert.*
+import groovy.test.GroovyTestCase.assertEquals
+import org.gradle.internal.impldep.org.junit.Test
 
 /**
  * Example local unit test, which will execute on the development machine (host).
