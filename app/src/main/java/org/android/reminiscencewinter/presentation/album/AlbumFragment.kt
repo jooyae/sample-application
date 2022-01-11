@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter
+package org.android.reminiscencewinter.presentation.album
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,18 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
-import org.android.reminiscencewinter.databinding.FragmentStoryBinding
-import org.android.reminiscencewinter.util.AutoClearedValue
+import org.android.reminiscencewinter.databinding.FragmentAlbumBinding
+import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
 @AndroidEntryPoint
-class StoryFragment : Fragment() {
-    private var binding by AutoClearedValue<FragmentStoryBinding>()
+class AlbumFragment : Fragment() {
+    private var binding by AutoClearedValue<FragmentAlbumBinding>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = FragmentStoryBinding.inflate(inflater, container, false)?.let {
+    ): View? = FragmentAlbumBinding.inflate(inflater, container, false)?.let{
         binding = it
         it.root
     }

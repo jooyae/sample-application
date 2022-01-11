@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.util
+package org.android.reminiscencewinter.presentation.util
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle

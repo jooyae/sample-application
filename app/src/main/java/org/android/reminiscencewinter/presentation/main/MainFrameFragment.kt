@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.main
+package org.android.reminiscencewinter.presentation.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,8 +10,12 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.*
+import org.android.reminiscencewinter.presentation.album.AlbumFragment
 import org.android.reminiscencewinter.databinding.FragmentMainFrameBinding
-import org.android.reminiscencewinter.util.AutoClearedValue
+import org.android.reminiscencewinter.presentation.memory.MemoryFragment
+import org.android.reminiscencewinter.presentation.storage.StorageFragment
+import org.android.reminiscencewinter.presentation.story.StoryFragment
+import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
 @AndroidEntryPoint
 class MainFrameFragment : Fragment() {

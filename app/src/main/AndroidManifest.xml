@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReminiscenceWinter">
         <activity
-            android:name=".main.MainActivity"
+            android:name="org.android.reminiscencewinter.presentation.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

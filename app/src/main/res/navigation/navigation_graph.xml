@@ -6,7 +6,7 @@
     app:startDestination="@+id/mainFrameFragment">
     <fragment
         android:id="@+id/mainFrameFragment"
-        android:name="org.android.reminiscencewinter.main.MainFrameFragment"
+        android:name="org.android.reminiscencewinter.presentation.main.MainFrameFragment"
         android:label="MainFrameFragment"
         tools:layout="@layout/fragment_main_frame"/>
 </navigation>

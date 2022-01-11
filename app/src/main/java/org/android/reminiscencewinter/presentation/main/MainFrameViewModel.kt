@@ -1,9 +1,8 @@
-package org.android.reminiscencewinter.main
+package org.android.reminiscencewinter.presentation.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import dagger.hilt.android.lifecycle.HiltViewModel
 
 class MainFrameViewModel : ViewModel() {
     private val _pageIndex: MutableLiveData<Int> = MutableLiveData(0)
