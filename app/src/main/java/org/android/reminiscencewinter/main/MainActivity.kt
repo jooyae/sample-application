@@ -1,10 +1,11 @@
-package org.android.reminiscencewinter
+package org.android.reminiscencewinter.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import dagger.hilt.android.AndroidEntryPoint
+import org.android.reminiscencewinter.R
 import org.android.reminiscencewinter.databinding.ActivityMainBinding
 
 @AndroidEntryPoint

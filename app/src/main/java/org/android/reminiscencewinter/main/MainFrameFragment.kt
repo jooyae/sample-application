@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter
+package org.android.reminiscencewinter.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentMainFrameBinding
+import org.android.reminiscencewinter.util.AutoClearedValue
 
 @AndroidEntryPoint
 class MainFrameFragment : Fragment() {
