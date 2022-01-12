@@ -9,6 +9,7 @@ object DependencyVersions {
     const val CONSTRAINT_LAYOUT_VERSION = "2.1.0"
     const val FRAGMENT_KTX_VERSION = "1.3.4"
     const val ACTIVITY_KTX_VERSION = "1.2.3"
+    const val COMPOSE_VERSION = "1.0.5"
 
     //SwipeRefreshLayout
     const val SWIPE_REFRESH_LAYOUT_VERSION = "1.1.0"
