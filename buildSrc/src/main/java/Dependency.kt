@@ -10,6 +10,7 @@ object Plugins {
     const val DAGGER_HILT_GRADLE_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:${DependencyVersions.DAGGER_HILT_VERSION}"
     const val NAVIGATION_PLUGIN = "androidx.navigation:navigation-safe-args-gradle-plugin:${DependencyVersions.NAVIGATION_VERSION}"
     const val CLASSPATH_GMS_GOOGLE_SERVICES = "com.google.gms:google-services:${DependencyVersions.GOOGLE_SERVICES}"
+    const val COMPOSE = "1.1.0-rc01"
 }
 
 object Gradle{
@@ -24,6 +25,7 @@ object AndroidX {
     const val ACTIVITY_KTX = "androidx.activity:activity-ktx:${DependencyVersions.ACTIVITY_KTX_VERSION}"
     const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${DependencyVersions.FRAGMENT_KTX_VERSION}"
     const val SWIPE_REFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:${DependencyVersions.SWIPE_REFRESH_LAYOUT_VERSION}"
+    const val COMPOSE = "androidx.compose:${DependencyVersions.COMPOSE_VERSION}"
 
     object Lifecycle {
         const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:${DependencyVersions.LIFECYCLE_VERSION}"
@@ -61,6 +63,7 @@ object Google {
 object Kotlin {
     const val KOTLIN_STDLIBS = "org.jetbrains.kotlin:kotlin-stdlib:${DependencyVersions.KOTLIN_VERSION}"
 }
+
 
 object DaggerHilt {
     const val HILT_ANDROID = "com.google.dagger:hilt-android:${DependencyVersions.DAGGER_HILT_VERSION}"
