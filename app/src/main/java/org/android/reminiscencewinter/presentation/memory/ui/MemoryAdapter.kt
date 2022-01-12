@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.android.reminiscencewinter.BR
-import org.android.reminiscencewinter.DiffCallback
+import org.android.reminiscencewinter.presentation.util.DiffCallback
 import org.android.reminiscencewinter.databinding.ItemMemoryBinding
 import org.android.reminiscencewinter.domain.entity.MemoryEntity
 

@@ -5,8 +5,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import org.android.daangngallery.data.network.RetrofitService
-import org.android.daangngallery.data.source.AlbumInfoDataSource
-import org.android.daangngallery.data.source.AlbumInfoDataSourceImpl
+import org.android.daangngallery.data.source.MemoryInfoDataSource
+import org.android.daangngallery.data.source.MemoryInfoDataSourceImpl
 import org.android.daangngallery.data.source.PicsumPhotoDataSource
 import org.android.daangngallery.data.source.PicsumPhotoDataSourceImpl
 import javax.inject.Singleton
@@ -20,6 +20,6 @@ object DataSourceModule {
         PicsumPhotoDataSourceImpl(retrofitService)
     @Provides
     @Singleton
-    fun provideAlbumInfoDataSource(retrofitService: RetrofitService): AlbumInfoDataSource =
-        AlbumInfoDataSourceImpl(retrofitService)
+    fun provideAlbumInfoDataSource(retrofitService: RetrofitService): MemoryInfoDataSource =
+        MemoryInfoDataSourceImpl(retrofitService)
 }
