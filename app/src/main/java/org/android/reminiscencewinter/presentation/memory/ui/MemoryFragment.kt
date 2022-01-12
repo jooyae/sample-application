@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.presentation.memory
+package org.android.reminiscencewinter.presentation.memory.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

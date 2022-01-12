@@ -1,4 +1,4 @@
-package org.android.daangngallery.di
+package org.android.reminiscencewinter.di.modules
 
 import dagger.Module
 import dagger.Provides
