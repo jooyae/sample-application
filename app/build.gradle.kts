@@ -52,6 +52,7 @@ dependencies {
     implementation(AndroidX.APPCOMPAT)
     implementation (AndroidX.CONSTRAINT_LAYOUT)
     implementation (Google.MATERIAL)
+    implementation(AndroidX.COMPOSE_MATERIAL)
     androidTestImplementation(AndroidX.COMPOSE)
     testImplementation(Test.JUNIT)
     androidTestImplementation(Test.AndroidTest.JUNIT_EXT)

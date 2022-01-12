@@ -26,6 +26,7 @@ object AndroidX {
     const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${DependencyVersions.FRAGMENT_KTX_VERSION}"
     const val SWIPE_REFRESH_LAYOUT = "androidx.swiperefreshlayout:swiperefreshlayout:${DependencyVersions.SWIPE_REFRESH_LAYOUT_VERSION}"
     const val COMPOSE = "androidx.compose:${DependencyVersions.COMPOSE_VERSION}"
+    const val COMPOSE_MATERIAL = "androidx.compose.material:material:${DependencyVersions.COMPOSE_MATERIAL_VERSION}"
 
     object Lifecycle {
         const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:${DependencyVersions.LIFECYCLE_VERSION}"
