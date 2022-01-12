@@ -30,14 +30,10 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
-        compose = true
     }
     compileOptions {
         sourceCompatibility= JavaVersion.VERSION_1_8
         targetCompatibility= JavaVersion.VERSION_1_8
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = Plugins.COMPOSE
     }
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
@@ -52,9 +48,10 @@ dependencies {
     implementation(AndroidX.APPCOMPAT)
     implementation (AndroidX.CONSTRAINT_LAYOUT)
     implementation (Google.MATERIAL)
-    implementation(AndroidX.COMPOSE_MATERIAL)
-    androidTestImplementation(AndroidX.COMPOSE)
+//    implementation(AndroidX.COMPOSE_MATERIAL)
+//    androidTestImplementation(AndroidX.COMPOSE)
     testImplementation(Test.JUNIT)
+    androidTestImplementation("org.junit.jupiter:junit-jupiter")
     androidTestImplementation(Test.AndroidTest.JUNIT_EXT)
     androidTestImplementation(Test.AndroidTest.ESPRESSO_CORE)
 

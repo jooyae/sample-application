@@ -10,7 +10,7 @@ object Plugins {
     const val DAGGER_HILT_GRADLE_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:${DependencyVersions.DAGGER_HILT_VERSION}"
     const val NAVIGATION_PLUGIN = "androidx.navigation:navigation-safe-args-gradle-plugin:${DependencyVersions.NAVIGATION_VERSION}"
     const val CLASSPATH_GMS_GOOGLE_SERVICES = "com.google.gms:google-services:${DependencyVersions.GOOGLE_SERVICES}"
-    const val COMPOSE = "1.1.0-rc01"
+//    const val COMPOSE = "1.0.0-beta07"
 }
 
 object Gradle{
