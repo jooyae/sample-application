@@ -3,7 +3,7 @@ package org.android.reminiscencewinter.presentation.memory.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import dagger.hilt.android.lifecycle.HiltViewModel
-import org.android.reminiscencewinter.domain.MemoryEntity
+import org.android.reminiscencewinter.domain.entity.MemoryEntity
 import org.android.reminiscencewinter.presentation.DisposableViewModel
 import javax.inject.Inject
 
