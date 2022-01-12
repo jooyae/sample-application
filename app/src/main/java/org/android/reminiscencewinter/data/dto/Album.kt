@@ -1,7 +1,7 @@
 package org.android.daangngallery.data.dto
 
 import com.thedeanda.lorem.LoremIpsum
-import org.android.reminiscencewinter.domain.AlbumEntity
+import org.android.reminiscencewinter.domain.MemoryEntity
 
 data class Album (
     val albumId: Int,
@@ -9,8 +9,8 @@ data class Album (
     val albumName: String? = LoremIpsum.getInstance().getWords(1, 2),
     val count: Int? = (25..50).random()
 ) {
-    fun convertToAlbumEntity(): AlbumEntity {
-        return AlbumEntity(
+    fun convertToAlbumEntity(): MemoryEntity {
+        return MemoryEntity(
             albumId = albumId,
             albumName = albumName,
             thumbnail = thumbnailInfo?.convertToPhotoEntity(),

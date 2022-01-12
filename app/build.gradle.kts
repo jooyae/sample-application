@@ -27,6 +27,7 @@ android {
             proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
         }
     }
+
     buildFeatures {
         viewBinding = true
         dataBinding = true
@@ -51,7 +52,6 @@ dependencies {
 //    implementation(AndroidX.COMPOSE_MATERIAL)
 //    androidTestImplementation(AndroidX.COMPOSE)
     testImplementation(Test.JUNIT)
-    androidTestImplementation("org.junit.jupiter:junit-jupiter")
     androidTestImplementation(Test.AndroidTest.JUNIT_EXT)
     androidTestImplementation(Test.AndroidTest.ESPRESSO_CORE)
 
