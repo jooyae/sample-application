@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter
+package org.android.reminiscencewinter.presentation.util
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil

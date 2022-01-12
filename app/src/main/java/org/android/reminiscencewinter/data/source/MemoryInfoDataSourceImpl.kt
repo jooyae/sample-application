@@ -5,9 +5,9 @@ import org.android.daangngallery.data.network.RetrofitService
 import org.android.daangngallery.data.dto.Album
 import javax.inject.Inject
 
-class AlbumInfoDataSourceImpl @Inject constructor(
+class MemoryInfoDataSourceImpl @Inject constructor(
     private val retrofitService: RetrofitService
-): AlbumInfoDataSource {
+): MemoryInfoDataSource {
     override fun getSpecificPicture(id: Int): Single<Album> =
         retrofitService.getSpecificPicture(id).map { Album(id, it) }
 }
