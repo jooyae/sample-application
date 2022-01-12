@@ -5,7 +5,7 @@
     <data>
         <variable
             name="memory"
-            type="org.android.reminiscencewinter.domain.MemoryEntity" />
+            type="org.android.reminiscencewinter.domain.entity.MemoryEntity" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -15,7 +15,6 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:scaleType="centerCrop"
-            loadImageUrl="@{memory.thumbnail.photo}"
             app:shapeAppearanceOverlay="@style/radius20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

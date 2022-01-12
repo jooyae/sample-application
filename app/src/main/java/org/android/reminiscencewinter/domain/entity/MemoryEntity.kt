@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.domain
+package org.android.reminiscencewinter.domain.entity
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
