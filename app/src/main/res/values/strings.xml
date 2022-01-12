@@ -8,4 +8,6 @@
     <string name="menu_album">Album</string>
     <string name="menu_story">Story</string>
     <string name="splash_ment">Reminiscence\nyour\nwinter memory</string>
+    <string name="memory_title">Your Memory</string>
+    <string name="image_count_format">%d개의 사진</string>
 </resources>
