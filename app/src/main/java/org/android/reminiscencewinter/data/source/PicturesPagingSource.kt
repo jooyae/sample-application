@@ -18,7 +18,7 @@ class PicturesPagingSource(
     override fun getRefreshKey(state: PagingState<Int, PhotoEntity>): Int? {
         return state.anchorPosition?.let {
             state.closestPageToPosition(it)?.prevKey?.plus(1) ?:
-        state.closestPageToPosition(it)?.nextKey?.minus(1)
+            state.closestPageToPosition(it)?.nextKey?.minus(1)
         }
     }
 

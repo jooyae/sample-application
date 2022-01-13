@@ -8,7 +8,11 @@
         android:id="@+id/mainFrameFragment"
         android:name="org.android.reminiscencewinter.presentation.main.MainFrameFragment"
         android:label="MainFrameFragment"
-        tools:layout="@layout/fragment_main_frame"/>
+        tools:layout="@layout/fragment_main_frame">
+        <action
+            android:id="@+id/action_mainFrameFragment_to_editMemoryFragment"
+            app:destination="@id/editMemoryFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="org.android.reminiscencewinter.presentation.splash.SplashFragment"
@@ -17,5 +21,14 @@
         <action
             android:id="@+id/action_splashFragment_to_mainFrameFragment"
             app:destination="@id/mainFrameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editMemoryFragment"
+        android:name="org.android.reminiscencewinter.presentation.memory.ui.EditMemoryFragment"
+        android:label="EditMemoryFragment"
+        tools:layout="@layout/fragment_edit_memory">
+    <argument
+        android:name="photoInfo"
+        app:argType="org.android.reminiscencewinter.domain.entity.MemoryEntity"/>
     </fragment>
 </navigation>
