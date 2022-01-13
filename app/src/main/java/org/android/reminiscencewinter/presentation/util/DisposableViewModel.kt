@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.presentation
+package org.android.reminiscencewinter.presentation.util
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable

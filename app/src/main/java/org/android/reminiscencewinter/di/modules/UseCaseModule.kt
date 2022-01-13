@@ -5,6 +5,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import org.android.reminiscencewinter.domain.repository.MemoryRepository
+import org.android.reminiscencewinter.domain.repository.PhotoRepository
+import org.android.reminiscencewinter.domain.usecase.GetPhotoInfoUseCase
 import org.android.reminiscencewinter.domain.usecase.MemoryInfoUseCase
 import javax.inject.Singleton
 
@@ -15,5 +17,10 @@ object UseCaseModule {
     @Singleton
     fun provideGetAlbumInfoUseCase(memoryRepository: MemoryRepository): MemoryInfoUseCase =
         MemoryInfoUseCase(memoryRepository)
+
+    @Provides
+    @Singleton
+    fun provideGetPhotoInfoUseCase(photoRepository: PhotoRepository) : GetPhotoInfoUseCase =
+        GetPhotoInfoUseCase(photoRepository)
 }
 

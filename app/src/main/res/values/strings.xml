@@ -10,4 +10,6 @@
     <string name="splash_ment">Reminiscence\nyour\nwinter memory</string>
     <string name="memory_title">Your Memory</string>
     <string name="image_count_format">%d개의 사진</string>
+    <string name="photo_brightness">채도 조절</string>
+    <string name="photo_contrast">명암 조절</string>
 </resources>
