@@ -8,27 +8,32 @@ import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import org.android.reminiscencewinter.domain.entity.MemoryEntity
 import org.android.reminiscencewinter.domain.usecase.MemoryInfoUseCase
-import org.android.reminiscencewinter.presentation.DisposableViewModel
+import org.android.reminiscencewinter.presentation.util.DisposableViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class MemoryViewModel @Inject constructor(
-    private val memoryInfoUseCase: MemoryInfoUseCase) : DisposableViewModel(){
+class MemoryViewModel @Inject constructor(private val memoryInfoUseCase: MemoryInfoUseCase) :
+    DisposableViewModel() {
     private val _albums = MutableLiveData<List<MemoryEntity>>(listOf())
     val albums: LiveData<List<MemoryEntity>> = _albums
+
+    private val _photoUrl = MutableLiveData<String>()
+    val photoUrl : LiveData<String> = _photoUrl
 
     init {
         getAlbumInfo()
     }
 
+
+
     private fun addAlbum(memory: MemoryEntity) {
         val albumList = albums.value?.toMutableList()
         albumList?.add(memory)
-        albumList?.let{_albums.postValue(it)}
+        albumList?.let { _albums.postValue(it) }
     }
 
     private fun getAlbumInfo() {
-        val albumIdxList = listOf(10, 30, 50)
+        val albumIdxList = listOf(10, 30, 50, 20, 40, 10, 20, 60, 30, 10, 15, 20)
         addDisposable(
             Observable.fromIterable(
                 albumIdxList
@@ -44,6 +49,5 @@ class MemoryViewModel @Inject constructor(
                 })
         )
     }
-
 
 }

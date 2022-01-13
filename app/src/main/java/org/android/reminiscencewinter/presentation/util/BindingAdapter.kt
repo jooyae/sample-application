@@ -5,6 +5,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import coil.load
+import coil.transform.CircleCropTransformation
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.ShapeAppearanceModel
 import org.android.reminiscencewinter.R
@@ -19,6 +20,7 @@ object BindingAdapter {
         url?.let {
             load(it){
                 crossfade(true)
+                placeholder(R.drawable.sharp_hourglass_top_black_1)
             }
         }
     }
