@@ -22,5 +22,6 @@ object UseCaseModule {
     @Singleton
     fun provideGetPhotoInfoUseCase(photoRepository: PhotoRepository) : GetPhotoInfoUseCase =
         GetPhotoInfoUseCase(photoRepository)
+
 }
 

@@ -2,6 +2,7 @@ package org.android.daangngallery.data.dto
 
 import com.thedeanda.lorem.LoremIpsum
 import org.android.reminiscencewinter.domain.model.MemoryEntity
+import org.android.reminiscencewinter.domain.model.PhotoEntity
 
 data class Album (
     val albumId: Int,
@@ -13,7 +14,7 @@ data class Album (
         return MemoryEntity(
             albumId = albumId,
             albumName = albumName,
-            thumbnail = thumbnailInfo?.convertToPhotoEntity(),
+            thumbnail = thumbnailInfo?.convertToMemoryEntity(),
             imageCount = count
         )
     }

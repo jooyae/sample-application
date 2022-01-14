@@ -9,7 +9,6 @@ import dagger.hilt.android.HiltAndroidApp
 class ReminiscenceApplication : Application(){
     override fun onCreate() {
         super.onCreate()
-        MultiDex.install(this)
     }
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(base)

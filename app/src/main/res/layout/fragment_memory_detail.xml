@@ -33,7 +33,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:title="@{viewModel.albumInfo.albumName, default=Title}"
                 app:titleTextColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -41,7 +40,6 @@
                 android:layout_height="250dp"
                 android:scaleType="centerCrop"
                 android:foreground="@drawable/gradation_shape"
-                loadImageUrl="@{viewModel.albumInfo.thumbnail.photo}"
                 android:background="@color/white" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>

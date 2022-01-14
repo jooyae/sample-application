@@ -5,7 +5,7 @@
     <data>
         <variable
             name="memory"
-            type="org.android.reminiscencewinter.domain.model.PhotoEntity" />
+            type="org.android.reminiscencewinter.domain.model.MemoryEntity" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
             android:layout_height="110dp"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/radius20"
-            loadImageUrl="@{memory.photo}"
+            loadImageUrl="@{memory.thumbnail.photo}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,9 +25,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@{memory.author}"
+            android:text="@{memory.albumName}"
             android:fontFamily="@font/pretendardbold"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:textColor="@color/black"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@id/imageview_representative_photo"
@@ -39,10 +39,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="4dp"
-            android:fontFamily="@font/pretendardregular"
+            android:fontFamily="@font/lobsterregular"
             android:textColor="@color/black"
-            android:textSize="10dp"
-            android:text="@{@string/image_count_format(memory.id)}"
+            android:textSize="12sp"
+            android:text="@{@string/image_count_format(memory.albumId)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/textview_category"
             app:layout_constraintTop_toBottomOf="@id/textview_category"

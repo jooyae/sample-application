@@ -39,13 +39,13 @@ class MemoryFragment : Fragment(){
         binding.recyclerviewMemory.run {
             adapter = MemoryAdapter(object : MemoryAdapter.OnItemClickListener{
                 override fun itemClick(view: View, memoryEntity: MemoryEntity) {
-//                    val action = MainFrameFragmentDirections.actionMainFrameFragmentToMemoryDetailFragment(memoryEntity)
-//                    findNavController().navigate(action)
+                    val action = MainFrameFragmentDirections.actionMainFrameFragmentToMemoryDetailFragment(memoryEntity)
+                    findNavController().navigate(action)
                 }
             })
             addItemDecoration(RecyclerviewSpacingDecoration(15,2))
-            viewModel.photos.observe(viewLifecycleOwner){
-                (adapter as MemoryAdapter).submitList(listOf())
+            viewModel.albumInfo.observe(viewLifecycleOwner){
+                (adapter as MemoryAdapter).submitList(it)
             }
         }
     }
