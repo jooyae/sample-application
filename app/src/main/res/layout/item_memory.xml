@@ -5,7 +5,7 @@
     <data>
         <variable
             name="memory"
-            type="org.android.reminiscencewinter.domain.entity.PhotoEntity" />
+            type="org.android.reminiscencewinter.domain.model.PhotoEntity" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"

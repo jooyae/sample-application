@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import org.android.reminiscencewinter.BR
 import org.android.reminiscencewinter.presentation.util.DiffCallback
 import org.android.reminiscencewinter.databinding.ItemMemoryBinding
-import org.android.reminiscencewinter.domain.entity.MemoryEntity
-import org.android.reminiscencewinter.domain.entity.PhotoEntity
+import org.android.reminiscencewinter.domain.model.MemoryEntity
+import org.android.reminiscencewinter.domain.model.PhotoEntity
 
 class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<PhotoEntity, MemoryAdapter.MemoryViewHolder>(
     DiffCallback<PhotoEntity>()

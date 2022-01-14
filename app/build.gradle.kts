@@ -49,7 +49,7 @@ dependencies {
     implementation(AndroidX.APPCOMPAT)
     implementation (AndroidX.CONSTRAINT_LAYOUT)
     implementation (Google.MATERIAL)
-    implementation("com.google.android.material:material:1.4.0")
+    implementation ("androidx.multidex:multidex:2.0.1")
 //    implementation(AndroidX.COMPOSE_MATERIAL)
 //    androidTestImplementation(AndroidX.COMPOSE)
     testImplementation(Test.JUNIT)
