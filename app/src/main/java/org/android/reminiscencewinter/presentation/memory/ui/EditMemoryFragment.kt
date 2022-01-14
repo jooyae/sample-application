@@ -4,20 +4,20 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentEditMemoryBinding
-import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
 @AndroidEntryPoint
 class EditMemoryFragment : Fragment(){
     private var binding by AutoClearedValue<FragmentEditMemoryBinding>()
-    private val viewModel : MemoryViewModel by viewModels()
-    private val args : EditMemoryFragmentArgs by navArgs()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,21 +29,61 @@ class EditMemoryFragment : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.viewModel = viewModel
+
         binding.lifecycleOwner = viewLifecycleOwner
-        viewModel.updatePhotos(args.photoInfo)
-        loadPhotos()
-        loadNavArgs()
+
+//        loadPhotos()
+//        loadNavArgs()
         popBackStack()
+        editPhoto()
     }
-    private fun loadNavArgs(){
-        with(viewModel){ args.photoInfo.thumbnail?.let { transferPhotoUrl(it.photo) } }
-    }
-    private fun loadPhotos(){
-        viewModel.memory.observe(viewLifecycleOwner) { if(it != null){ viewModel.getPictures() } }
-    }
+
     private fun popBackStack(){
         binding.buttonBack.setOnClickListener { findNavController().popBackStack() }
+    }
+    private fun editPhoto(){
+        with(binding){
+            buttonEdit.setOnClickListener {
+                binding.layoutEditor.isVisible = true
+                changeSaturation()
+                changeContrast()
+            }
+        }
+    }
+
+    private fun changeSaturation(){
+        binding.seekbarBrightness.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(
+                seekBar: SeekBar?,
+                progress: Int,
+                fromUser: Boolean
+            ) {
+                with(binding){
+                    imageviewPhoto.saturation = (progress / 100.0f) * 2
+                    textviewBrightnessCount.text = binding.imageviewPhoto.saturation.toString()
+                }
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
+    }
+
+    private fun changeContrast(){
+        binding.seekbarContrast.setOnSeekBarChangeListener(object:
+            SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(
+                seekBar: SeekBar?,
+                progress: Int,
+                fromUser: Boolean
+            ) {
+                with(binding){
+                    imageviewPhoto.contrast = (progress / 100.0f) * 2
+                    textviewContrastCount.text = binding.imageviewPhoto.contrast.toString()
+                }
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
     }
 
 

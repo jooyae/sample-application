@@ -9,12 +9,13 @@ import org.android.reminiscencewinter.BR
 import org.android.reminiscencewinter.presentation.util.DiffCallback
 import org.android.reminiscencewinter.databinding.ItemMemoryBinding
 import org.android.reminiscencewinter.domain.entity.MemoryEntity
+import org.android.reminiscencewinter.domain.entity.PhotoEntity
 
-class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<MemoryEntity, MemoryAdapter.MemoryViewHolder>(
-    DiffCallback<MemoryEntity>()
+class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<PhotoEntity, MemoryAdapter.MemoryViewHolder>(
+    DiffCallback<PhotoEntity>()
 ) {
     interface OnItemClickListener{
-        fun itemClick(view : View, memoryEntity: MemoryEntity)
+        fun itemClick(view: View, memoryEntity: MemoryEntity)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MemoryViewHolder {
         val binding = ItemMemoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -23,7 +24,7 @@ class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<MemoryEnti
     override fun onBindViewHolder(holder: MemoryViewHolder, position: Int) {
         val item = getItem(position)
         holder.binding.run { setVariable(BR.memory, item) }
-        holder.binding.root.setOnClickListener { listener.itemClick(holder.binding.imageviewRepresentativePhoto, item) }
+        holder.binding.root.setOnClickListener {  }
     }
     class MemoryViewHolder(val binding : ItemMemoryBinding) : RecyclerView.ViewHolder(binding.root)
 }

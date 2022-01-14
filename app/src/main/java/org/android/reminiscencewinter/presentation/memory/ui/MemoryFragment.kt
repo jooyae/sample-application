@@ -11,14 +11,14 @@ import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentMemoryBinding
 import org.android.reminiscencewinter.domain.entity.MemoryEntity
 import org.android.reminiscencewinter.presentation.main.MainFrameFragmentDirections
-import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryViewModel
+import org.android.reminiscencewinter.presentation.memory.viewmodel.AlbumViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 import org.android.reminiscencewinter.presentation.util.RecyclerviewSpacingDecoration
 
 @AndroidEntryPoint
 class MemoryFragment : Fragment(){
     private var binding by AutoClearedValue<FragmentMemoryBinding>()
-    private val viewModel by viewModels<MemoryViewModel>()
+    private val viewModel by viewModels<AlbumViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -39,13 +39,13 @@ class MemoryFragment : Fragment(){
         binding.recyclerviewMemory.run {
             adapter = MemoryAdapter(object : MemoryAdapter.OnItemClickListener{
                 override fun itemClick(view: View, memoryEntity: MemoryEntity) {
-                    val action = MainFrameFragmentDirections.actionMainFrameFragmentToEditMemoryFragment(memoryEntity)
+                    val action = MainFrameFragmentDirections.actionMainFrameFragmentToMemoryDetailFragment(memoryEntity)
                     findNavController().navigate(action)
                 }
             })
             addItemDecoration(RecyclerviewSpacingDecoration(15,2))
-            viewModel.albums.observe(viewLifecycleOwner){
-                (adapter as MemoryAdapter).submitList(it)
+            viewModel.photos.observe(viewLifecycleOwner){
+                (adapter as MemoryAdapter).submitList(listOf())
             }
         }
     }
