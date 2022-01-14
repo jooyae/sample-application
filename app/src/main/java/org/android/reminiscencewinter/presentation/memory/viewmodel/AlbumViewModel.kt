@@ -8,8 +8,8 @@ import androidx.paging.rxjava3.cachedIn
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.android.reminiscencewinter.domain.entity.MemoryEntity
-import org.android.reminiscencewinter.domain.entity.PhotoEntity
+import org.android.reminiscencewinter.domain.model.MemoryEntity
+import org.android.reminiscencewinter.domain.model.PhotoEntity
 import org.android.reminiscencewinter.domain.usecase.GetPhotoInfoUseCase
 import org.android.reminiscencewinter.presentation.util.DisposableViewModel
 import javax.inject.Inject

@@ -1,7 +1,7 @@
 package org.android.daangngallery.data.dto
 
 import com.thedeanda.lorem.LoremIpsum
-import org.android.reminiscencewinter.domain.entity.MemoryEntity
+import org.android.reminiscencewinter.domain.model.MemoryEntity
 
 data class Album (
     val albumId: Int,

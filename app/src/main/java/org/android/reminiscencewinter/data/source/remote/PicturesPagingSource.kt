@@ -1,11 +1,11 @@
-package org.android.daangngallery.data.source
+package org.android.reminiscencewinter.data.source.remote
 
 import androidx.paging.PagingState
 import androidx.paging.rxjava3.RxPagingSource
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 import org.android.daangngallery.data.network.RetrofitService
-import org.android.reminiscencewinter.domain.entity.PhotoEntity
+import org.android.reminiscencewinter.domain.model.PhotoEntity
 
 class PicturesPagingSource(
     private val retrofitService: RetrofitService,

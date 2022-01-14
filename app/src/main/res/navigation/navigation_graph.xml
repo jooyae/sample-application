@@ -6,7 +6,7 @@
     app:startDestination="@+id/splashFragment">
     <fragment
         android:id="@+id/mainFrameFragment"
-        android:name="org.android.reminiscencewinter.presentation.main.MainFrameFragment"
+        android:name="org.android.reminiscencewinter.presentation.main.ui.MainFrameFragment"
         android:label="MainFrameFragment"
         tools:layout="@layout/fragment_main_frame">
         <action
@@ -30,7 +30,7 @@
 
         <argument
             android:name="albumInfo"
-            app:argType="org.android.reminiscencewinter.domain.entity.PhotoEntity"/>
+            app:argType="org.android.reminiscencewinter.domain.model.PhotoEntity"/>
     </fragment>
     <fragment
         android:id="@+id/memoryDetailFragment"
@@ -39,7 +39,7 @@
         tools:layout="@layout/fragment_memory_detail">
         <argument
             android:name="photoInfo"
-            app:argType="org.android.reminiscencewinter.domain.entity.MemoryEntity"/>
+            app:argType="org.android.reminiscencewinter.domain.model.MemoryEntity"/>
         <action
             android:id="@+id/action_memoryDetailFragment_to_editMemoryFragment"
             app:destination="@id/editMemoryFragment" />

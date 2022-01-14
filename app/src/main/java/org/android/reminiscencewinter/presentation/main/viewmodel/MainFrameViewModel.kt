@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.presentation.main
+package org.android.reminiscencewinter.presentation.main.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

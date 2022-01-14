@@ -6,14 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentMemoryBinding
-import org.android.reminiscencewinter.domain.entity.MemoryEntity
 import org.android.reminiscencewinter.presentation.memory.viewmodel.AlbumViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
-import org.android.reminiscencewinter.presentation.util.RecyclerviewSpacingDecoration
 
 @AndroidEntryPoint
 class MemoryDetailFragment  : Fragment(){
@@ -33,7 +30,7 @@ class MemoryDetailFragment  : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
-        viewModel.updateAlbumInfo(args.photoInfo)
+//        viewModel.updateAlbumInfo(args.photoInfo)
         loadPictures()
         loadPhotos()
     }

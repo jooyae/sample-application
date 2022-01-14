@@ -1,6 +1,6 @@
 package org.android.daangngallery.data.dto
 
-import org.android.reminiscencewinter.domain.entity.PhotoEntity
+import org.android.reminiscencewinter.domain.model.PhotoEntity
 
 
 data class Picsum(

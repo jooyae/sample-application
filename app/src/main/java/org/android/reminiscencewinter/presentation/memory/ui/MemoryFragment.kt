@@ -9,8 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentMemoryBinding
-import org.android.reminiscencewinter.domain.entity.MemoryEntity
-import org.android.reminiscencewinter.presentation.main.MainFrameFragmentDirections
+import org.android.reminiscencewinter.domain.model.MemoryEntity
+import org.android.reminiscencewinter.presentation.main.ui.MainFrameFragmentDirections
 import org.android.reminiscencewinter.presentation.memory.viewmodel.AlbumViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 import org.android.reminiscencewinter.presentation.util.RecyclerviewSpacingDecoration
@@ -39,8 +39,8 @@ class MemoryFragment : Fragment(){
         binding.recyclerviewMemory.run {
             adapter = MemoryAdapter(object : MemoryAdapter.OnItemClickListener{
                 override fun itemClick(view: View, memoryEntity: MemoryEntity) {
-                    val action = MainFrameFragmentDirections.actionMainFrameFragmentToMemoryDetailFragment(memoryEntity)
-                    findNavController().navigate(action)
+//                    val action = MainFrameFragmentDirections.actionMainFrameFragmentToMemoryDetailFragment(memoryEntity)
+//                    findNavController().navigate(action)
                 }
             })
             addItemDecoration(RecyclerviewSpacingDecoration(15,2))

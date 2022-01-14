@@ -6,8 +6,8 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.android.reminiscencewinter.BR
 import org.android.reminiscencewinter.databinding.ItemPhotoBinding
-import org.android.reminiscencewinter.domain.entity.MemoryEntity
-import org.android.reminiscencewinter.domain.entity.PhotoEntity
+import org.android.reminiscencewinter.domain.model.MemoryEntity
+import org.android.reminiscencewinter.domain.model.PhotoEntity
 import org.android.reminiscencewinter.presentation.util.DiffCallback
 
 class PicturePagerAdapter(private val listener : PictureInfoInterface)  : PagingDataAdapter<MemoryEntity, PicturePagerAdapter.PicturePagerViewHolder>(

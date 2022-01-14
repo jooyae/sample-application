@@ -1,8 +1,7 @@
-package org.android.reminiscencewinter.domain.entity
+package org.android.reminiscencewinter.domain.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
-import org.android.reminiscencewinter.domain.entity.PhotoEntity
 
 @Parcelize
 data class MemoryEntity (

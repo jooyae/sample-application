@@ -6,8 +6,8 @@ import androidx.paging.PagingData
 import androidx.paging.rxjava3.flowable
 import io.reactivex.rxjava3.core.Flowable
 import org.android.daangngallery.data.network.RetrofitService
-import org.android.daangngallery.data.source.PicturesPagingSource
-import org.android.reminiscencewinter.domain.entity.PhotoEntity
+import org.android.reminiscencewinter.data.source.remote.PicturesPagingSource
+import org.android.reminiscencewinter.domain.model.PhotoEntity
 import javax.inject.Inject
 
 class PhotoRepositoryImpl @Inject constructor(
@@ -19,7 +19,7 @@ class PhotoRepositoryImpl @Inject constructor(
                 pageSize = 1,
                 enablePlaceholders = true
             ),
-            pagingSourceFactory = {PicturesPagingSource(retrofitService, initPage, size, limit)}
+            pagingSourceFactory = { PicturesPagingSource(retrofitService, initPage, size, limit) }
         ).flowable
     }
 }
