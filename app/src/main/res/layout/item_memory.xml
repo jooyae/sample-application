@@ -5,7 +5,7 @@
     <data>
         <variable
             name="memory"
-            type="org.android.reminiscencewinter.domain.entity.MemoryEntity" />
+            type="org.android.reminiscencewinter.domain.entity.PhotoEntity" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
             android:layout_height="110dp"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/radius20"
-            loadImageUrl="@{memory.thumbnail.photo}"
+            loadImageUrl="@{memory.photo}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@{memory.albumName}"
+            android:text="@{memory.author}"
             android:fontFamily="@font/pretendardbold"
             android:textSize="14dp"
             android:textColor="@color/black"
@@ -42,7 +42,7 @@
             android:fontFamily="@font/pretendardregular"
             android:textColor="@color/black"
             android:textSize="10dp"
-            android:text="@{@string/image_count_format(memory.imageCount)}"
+            android:text="@{@string/image_count_format(memory.id)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/textview_category"
             app:layout_constraintTop_toBottomOf="@id/textview_category"

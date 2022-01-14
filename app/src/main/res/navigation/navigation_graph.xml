@@ -10,8 +10,8 @@
         android:label="MainFrameFragment"
         tools:layout="@layout/fragment_main_frame">
         <action
-            android:id="@+id/action_mainFrameFragment_to_editMemoryFragment"
-            app:destination="@id/editMemoryFragment" />
+            android:id="@+id/action_mainFrameFragment_to_memoryDetailFragment"
+            app:destination="@id/memoryDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -27,8 +27,21 @@
         android:name="org.android.reminiscencewinter.presentation.memory.ui.EditMemoryFragment"
         android:label="EditMemoryFragment"
         tools:layout="@layout/fragment_edit_memory">
-    <argument
-        android:name="photoInfo"
-        app:argType="org.android.reminiscencewinter.domain.entity.MemoryEntity"/>
+
+        <argument
+            android:name="albumInfo"
+            app:argType="org.android.reminiscencewinter.domain.entity.PhotoEntity"/>
+    </fragment>
+    <fragment
+        android:id="@+id/memoryDetailFragment"
+        android:name="org.android.reminiscencewinter.presentation.memory.ui.MemoryDetailFragment"
+        android:label="MemoryDetailFragment"
+        tools:layout="@layout/fragment_memory_detail">
+        <argument
+            android:name="photoInfo"
+            app:argType="org.android.reminiscencewinter.domain.entity.MemoryEntity"/>
+        <action
+            android:id="@+id/action_memoryDetailFragment_to_editMemoryFragment"
+            app:destination="@id/editMemoryFragment" />
     </fragment>
 </navigation>
