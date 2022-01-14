@@ -31,18 +31,18 @@ class MemoryDetailFragment  : Fragment(){
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
 //        viewModel.updateAlbumInfo(args.photoInfo)
-        loadPictures()
-        loadPhotos()
+//        loadPictures()
+//        loadPhotos()
     }
 
-    private fun loadPictures() {
-        viewModel.albumInfo.observe(viewLifecycleOwner) { album ->
-            if(album != null) {
-                viewModel.getPictures()
-            }
-        }
-    }
+//    private fun loadPictures() {
+//        viewModel.albumInfo.observe(viewLifecycleOwner) { album ->
+//            if(album != null) {
+//                viewModel.getPictures()
+//            }
+//        }
+//    }
 
-    private fun loadPhotos(){ viewModel.photos.observe(viewLifecycleOwner) { if(it != null){ viewModel.getPictures() } } }
+//    private fun loadPhotos(){ viewModel.photos.observe(viewLifecycleOwner) { if(it != null){ viewModel.getPictures() } } }
 
 }

@@ -13,7 +13,11 @@ import javax.inject.Inject
 class PhotoRepositoryImpl @Inject constructor(
     private val retrofitService: RetrofitService
 ) : PhotoRepository{
-    override fun getPhotos(initPage: Int, size: Int, limit: Int): Flowable<PagingData<PhotoEntity>> {
+    override fun getPhotos(
+        initPage: Int,
+        size: Int,
+        limit: Int
+    ): Flowable<PagingData<PhotoEntity>> {
         return Pager(
             config = PagingConfig(
                 pageSize = 1,

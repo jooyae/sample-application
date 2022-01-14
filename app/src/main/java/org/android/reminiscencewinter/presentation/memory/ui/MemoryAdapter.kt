@@ -11,8 +11,8 @@ import org.android.reminiscencewinter.databinding.ItemMemoryBinding
 import org.android.reminiscencewinter.domain.model.MemoryEntity
 import org.android.reminiscencewinter.domain.model.PhotoEntity
 
-class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<PhotoEntity, MemoryAdapter.MemoryViewHolder>(
-    DiffCallback<PhotoEntity>()
+class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<MemoryEntity, MemoryAdapter.MemoryViewHolder>(
+    DiffCallback<MemoryEntity>()
 ) {
     interface OnItemClickListener{
         fun itemClick(view: View, memoryEntity: MemoryEntity)
@@ -24,7 +24,7 @@ class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<PhotoEntit
     override fun onBindViewHolder(holder: MemoryViewHolder, position: Int) {
         val item = getItem(position)
         holder.binding.run { setVariable(BR.memory, item) }
-        holder.binding.root.setOnClickListener {  }
+        holder.binding.root.setOnClickListener { listener.itemClick(holder.binding.imageviewRepresentativePhoto, item) }
     }
     class MemoryViewHolder(val binding : ItemMemoryBinding) : RecyclerView.ViewHolder(binding.root)
 }
