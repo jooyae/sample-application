@@ -12,12 +12,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentEditMemoryBinding
+import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryDetailViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
 @AndroidEntryPoint
-class EditMemoryFragment : Fragment(){
+class EditPhotoFragment : Fragment(){
     private var binding by AutoClearedValue<FragmentEditMemoryBinding>()
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
