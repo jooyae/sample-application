@@ -42,10 +42,9 @@ class AlbumViewModel @Inject constructor(
 
     private fun getAlbumInfo() {
         val albumIdxList = listOf(10, 30, 50,10,20,30,40,50,20,10,55,32)
-
         albumIdxList.forEach {
             memoryInfoUseCase.execute(it, {
-
+                addPhoto(it)
             },{
                 it.printStackTrace()
             })
