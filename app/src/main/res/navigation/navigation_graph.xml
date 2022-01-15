@@ -23,7 +23,7 @@
             app:destination="@id/mainFrameFragment" />
     </fragment>
     <fragment
-        android:id="@+id/editMemoryFragment"
+        android:id="@+id/editPhotoFragment"
         android:name="org.android.reminiscencewinter.presentation.memory.ui.EditPhotoFragment"
         android:label="EditMemoryFragment"
         tools:layout="@layout/fragment_edit_memory">
@@ -41,6 +41,6 @@
             app:argType="org.android.reminiscencewinter.domain.model.AlbumEntity"/>
         <action
             android:id="@+id/action_memoryDetailFragment_to_editMemoryFragment"
-            app:destination="@id/editMemoryFragment" />
+            app:destination="@id/editPhotoFragment" />
     </fragment>
 </navigation>

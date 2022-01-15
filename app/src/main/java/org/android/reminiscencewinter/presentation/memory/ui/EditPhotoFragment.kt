@@ -12,12 +12,15 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentEditMemoryBinding
+import org.android.reminiscencewinter.presentation.memory.viewmodel.EditPhotoViewModel
 import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryDetailViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
 @AndroidEntryPoint
 class EditPhotoFragment : Fragment(){
     private var binding by AutoClearedValue<FragmentEditMemoryBinding>()
+    private val viewModel : EditPhotoViewModel by viewModels()
+    private val args : EditPhotoFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,15 +32,18 @@ class EditPhotoFragment : Fragment(){
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.lifecycleOwner = viewLifecycleOwner
-
-//        loadPhotos()
-//        loadNavArgs()
+        binding.viewModel = viewModel
+        loadNavArgs()
         popBackStack()
         editPhoto()
     }
-
+    private fun loadNavArgs(){
+        with(viewModel){
+            transferPhotoUrl(args.albumInfo.photo)
+            transferPhotoAuthor(args.albumInfo.author)
+        }
+    }
     private fun popBackStack(){
         binding.buttonBack.setOnClickListener { findNavController().popBackStack() }
     }

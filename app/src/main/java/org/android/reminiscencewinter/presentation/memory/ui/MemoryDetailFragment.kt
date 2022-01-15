@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
-import org.android.reminiscencewinter.databinding.FragmentMemoryBinding
+import org.android.reminiscencewinter.databinding.FragmentMemoryDetailBinding
 import org.android.reminiscencewinter.domain.model.PhotoEntity
 import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryDetailViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
@@ -17,7 +17,7 @@ import org.android.reminiscencewinter.presentation.util.RecyclerviewSpacingDecor
 
 @AndroidEntryPoint
 class MemoryDetailFragment  : Fragment(){
-    private var binding by AutoClearedValue<FragmentMemoryBinding>()
+    private var binding by AutoClearedValue<FragmentMemoryDetailBinding>()
     private val viewModel : MemoryDetailViewModel by viewModels()
     private val args : MemoryDetailFragmentArgs by navArgs()
 
@@ -25,7 +25,7 @@ class MemoryDetailFragment  : Fragment(){
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View?= FragmentMemoryBinding.inflate(inflater, container, false)?.let {
+    ): View?= FragmentMemoryDetailBinding.inflate(inflater, container, false)?.let {
         binding = it
         it.root
     }
@@ -51,7 +51,7 @@ class MemoryDetailFragment  : Fragment(){
     }
 
     private fun loadAlbum(){
-        binding.recyclerviewMemory.run{
+        binding.recyclerviewPictures.run{
             adapter = PicturePagerAdapter(object : PicturePagerAdapter.PictureInfoInterface{
                 override fun showDetail(photoEntity: PhotoEntity) {
                     val action = MemoryDetailFragmentDirections.actionMemoryDetailFragmentToEditMemoryFragment(photoEntity)

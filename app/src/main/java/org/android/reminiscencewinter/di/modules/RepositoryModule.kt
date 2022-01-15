@@ -6,10 +6,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import org.android.daangngallery.data.network.RetrofitService
 import org.android.daangngallery.data.source.MemoryInfoDataSource
-import org.android.reminiscencewinter.domain.repository.MemoryRepository
-import org.android.reminiscencewinter.domain.repository.MemoryRepositoryImpl
-import org.android.reminiscencewinter.domain.repository.PhotoRepository
-import org.android.reminiscencewinter.domain.repository.PhotoRepositoryImpl
+import org.android.daangngallery.data.source.PicsumPhotoDataSource
+import org.android.reminiscencewinter.domain.repository.*
 import javax.inject.Singleton
 
 @Module
@@ -24,5 +22,10 @@ object RepositoryModule {
     @Singleton
     fun providePhotoRepository(retrofitService: RetrofitService) : PhotoRepository =
         PhotoRepositoryImpl(retrofitService)
+
+    @Provides
+    @Singleton
+    fun providePicsumPhotoRepository(picsumPhotoDataSource: PicsumPhotoDataSource) : PicsumRepository =
+        PicsumRepositoryImpl(picsumPhotoDataSource)
 
 }
