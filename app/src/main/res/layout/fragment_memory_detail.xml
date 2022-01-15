@@ -60,6 +60,7 @@
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 android:orientation="vertical"
                 app:spanCount="4"
+                tool:listitem="@layout/item_photo"
                 app:layout_constraintVertical_bias="0.0"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

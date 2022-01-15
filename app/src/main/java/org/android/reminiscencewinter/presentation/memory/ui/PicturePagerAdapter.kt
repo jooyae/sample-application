@@ -6,7 +6,6 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.android.reminiscencewinter.BR
 import org.android.reminiscencewinter.databinding.ItemPhotoBinding
-import org.android.reminiscencewinter.domain.model.AlbumEntity
 import org.android.reminiscencewinter.domain.model.PhotoEntity
 import org.android.reminiscencewinter.presentation.util.DiffCallback
 

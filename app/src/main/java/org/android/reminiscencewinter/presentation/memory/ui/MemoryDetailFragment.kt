@@ -33,7 +33,10 @@ class MemoryDetailFragment  : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
+        binding.viewModel = viewModel
+
         viewModel.updateAlbumInfo(args.photoInfo)
+
         updatePhotos()
         updatePictures()
         loadAlbum()
