@@ -27,7 +27,6 @@
         android:name="org.android.reminiscencewinter.presentation.memory.ui.EditMemoryFragment"
         android:label="EditMemoryFragment"
         tools:layout="@layout/fragment_edit_memory">
-
         <argument
             android:name="albumInfo"
             app:argType="org.android.reminiscencewinter.domain.model.PhotoEntity"/>
@@ -39,7 +38,7 @@
         tools:layout="@layout/fragment_memory_detail">
         <argument
             android:name="photoInfo"
-            app:argType="org.android.reminiscencewinter.domain.model.MemoryEntity"/>
+            app:argType="org.android.reminiscencewinter.domain.model.AlbumEntity"/>
         <action
             android:id="@+id/action_memoryDetailFragment_to_editMemoryFragment"
             app:destination="@id/editMemoryFragment" />

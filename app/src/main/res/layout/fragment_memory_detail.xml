@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="org.android.reminiscencewinter.presentation.memory.viewmodel.AlbumViewModel" />
+            type="org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryViewModel" />
     </data>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
