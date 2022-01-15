@@ -6,17 +6,15 @@
     <data>
         <variable
             name="viewModel"
-            type="org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryViewModel" />
+            type="org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryDetailViewModel" />
     </data>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white">
-
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
@@ -27,18 +25,18 @@
             app:expandedTitleTextAppearance="@style/CollapsingTitleStyle"
             app:collapsedTitleTextAppearance="@style/CollapsingTitleStyle"
             app:toolbarId="@id/toolbar">
-
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
+                app:title="@{viewModel.albumInfo.albumName, default=Title}"
                 app:titleTextColor="@color/black" />
-
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:scaleType="centerCrop"
+                loadImageUrl="@{viewModel.albumInfo.thumbnail.photo}"
                 android:foreground="@drawable/gradation_shape"
                 android:background="@color/white" />
 
@@ -51,11 +49,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerview_pictures"
                 android:layout_width="wrap_content"
@@ -64,12 +60,12 @@
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 android:orientation="vertical"
                 app:spanCount="4"
+                tool:listitem="@layout/item_photo"
                 app:layout_constraintVertical_bias="0.0"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

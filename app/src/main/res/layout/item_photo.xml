@@ -4,7 +4,7 @@
     <data>
         <variable
             name="data"
-            type="org.android.reminiscencewinter.domain.model.AlbumEntity" />
+            type="org.android.reminiscencewinter.domain.model.PhotoEntity" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="85dp"
@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:transitionName="image"
-            loadImageUrl="@{data.thumbnail.photo}"
+            loadImageUrl="@{data.photo}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -6,12 +6,11 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.android.reminiscencewinter.BR
 import org.android.reminiscencewinter.databinding.ItemPhotoBinding
-import org.android.reminiscencewinter.domain.model.AlbumEntity
 import org.android.reminiscencewinter.domain.model.PhotoEntity
 import org.android.reminiscencewinter.presentation.util.DiffCallback
 
-class PicturePagerAdapter(private val listener : PictureInfoInterface)  : PagingDataAdapter<AlbumEntity, PicturePagerAdapter.PicturePagerViewHolder>(
-    DiffCallback<AlbumEntity>()
+class PicturePagerAdapter(private val listener : PictureInfoInterface)  : PagingDataAdapter<PhotoEntity, PicturePagerAdapter.PicturePagerViewHolder>(
+    DiffCallback<PhotoEntity>()
 ){
     interface PictureInfoInterface{
         fun showDetail(photoEntity: PhotoEntity)
@@ -20,7 +19,9 @@ class PicturePagerAdapter(private val listener : PictureInfoInterface)  : Paging
         val picture = getItem(position)
         holder.binding.setVariable(BR.memory, picture)
         holder.binding.imageviewPhoto.setOnClickListener {
-
+            if (picture != null) {
+                listener.showDetail(picture)
+            }
         }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PicturePagerViewHolder {
