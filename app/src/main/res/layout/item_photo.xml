@@ -4,7 +4,7 @@
     <data>
         <variable
             name="data"
-            type="org.android.reminiscencewinter.domain.model.MemoryEntity" />
+            type="org.android.reminiscencewinter.domain.model.AlbumEntity" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="85dp"

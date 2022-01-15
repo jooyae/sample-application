@@ -8,14 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import org.android.reminiscencewinter.BR
 import org.android.reminiscencewinter.presentation.util.DiffCallback
 import org.android.reminiscencewinter.databinding.ItemMemoryBinding
-import org.android.reminiscencewinter.domain.model.MemoryEntity
-import org.android.reminiscencewinter.domain.model.PhotoEntity
+import org.android.reminiscencewinter.domain.model.AlbumEntity
 
-class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<MemoryEntity, MemoryAdapter.MemoryViewHolder>(
-    DiffCallback<MemoryEntity>()
+class MemoryAdapter(val listener : OnItemClickListener) : ListAdapter<AlbumEntity, MemoryAdapter.MemoryViewHolder>(
+    DiffCallback<AlbumEntity>()
 ) {
     interface OnItemClickListener{
-        fun itemClick(view: View, memoryEntity: MemoryEntity)
+        fun itemClick(view: View, albumEntity: AlbumEntity)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MemoryViewHolder {
         val binding = ItemMemoryBinding.inflate(LayoutInflater.from(parent.context), parent, false)

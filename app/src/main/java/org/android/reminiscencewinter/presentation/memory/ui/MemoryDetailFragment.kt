@@ -9,13 +9,13 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentMemoryBinding
-import org.android.reminiscencewinter.presentation.memory.viewmodel.AlbumViewModel
+import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
 @AndroidEntryPoint
 class MemoryDetailFragment  : Fragment(){
     private var binding by AutoClearedValue<FragmentMemoryBinding>()
-    private val viewModel : AlbumViewModel by viewModels()
+    private val viewModel : MemoryViewModel by viewModels()
     private val args : MemoryDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -30,19 +30,6 @@ class MemoryDetailFragment  : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
-//        viewModel.updateAlbumInfo(args.photoInfo)
-//        loadPictures()
-//        loadPhotos()
     }
-
-//    private fun loadPictures() {
-//        viewModel.albumInfo.observe(viewLifecycleOwner) { album ->
-//            if(album != null) {
-//                viewModel.getPictures()
-//            }
-//        }
-//    }
-
-//    private fun loadPhotos(){ viewModel.photos.observe(viewLifecycleOwner) { if(it != null){ viewModel.getPictures() } } }
 
 }
