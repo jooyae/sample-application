@@ -23,5 +23,6 @@ object UseCaseModule {
     fun provideGetPhotoInfoUseCase(photoRepository: PhotoRepository) : GetPhotoInfoUseCase =
         GetPhotoInfoUseCase(photoRepository)
 
+
 }
 

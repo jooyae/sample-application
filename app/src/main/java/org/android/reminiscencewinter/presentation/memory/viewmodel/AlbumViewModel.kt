@@ -34,22 +34,22 @@ class AlbumViewModel @Inject constructor(
         getAlbumInfo()
     }
 
+    fun addPhoto(photo: MemoryEntity) {
+        val albums = albumInfo.value?.toMutableList() ?: mutableListOf()
+        albums.add(photo)
+        _albumInfo.postValue(albums)
+    }
+
     private fun getAlbumInfo() {
         val albumIdxList = listOf(10, 30, 50,10,20,30,40,50,20,10,55,32)
-        addDisposable(
-            Observable.fromIterable(
-                albumIdxList
-            ).concatMapEager {
-                memoryInfoUseCase(it).toObservable()
-            }.subscribeOn(Schedulers.io())
-                .toList()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({
-                    _albumInfo.postValue(it)
-                }, {
-                    it.printStackTrace()
-                })
-        )
+
+        albumIdxList.forEach {
+            memoryInfoUseCase.execute(it, {
+
+            },{
+                it.printStackTrace()
+            })
+        }
     }
 
 }
