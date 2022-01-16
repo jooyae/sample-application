@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/editPhotoFragment"
-        android:name="org.android.reminiscencewinter.presentation.memory.ui.EditPhotoFragment"
+        android:name="org.android.reminiscencewinter.presentation.memory.ui.fragment.EditPhotoFragment"
         android:label="EditMemoryFragment"
         tools:layout="@layout/fragment_edit_memory">
         <argument
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/memoryDetailFragment"
-        android:name="org.android.reminiscencewinter.presentation.memory.ui.MemoryDetailFragment"
+        android:name="org.android.reminiscencewinter.presentation.memory.ui.fragment.MemoryDetailFragment"
         android:label="MemoryDetailFragment"
         tools:layout="@layout/fragment_memory_detail">
         <argument

@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.presentation.memory.ui
+package org.android.reminiscencewinter.presentation.memory.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,7 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentMemoryDetailBinding
 import org.android.reminiscencewinter.domain.model.PhotoEntity
+import org.android.reminiscencewinter.presentation.memory.ui.adapter.PicturePagerAdapter
 import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryDetailViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 import org.android.reminiscencewinter.presentation.util.RecyclerviewSpacingDecoration
@@ -52,7 +53,9 @@ class MemoryDetailFragment  : Fragment(){
         binding.recyclerviewPictures.run{
             adapter = PicturePagerAdapter(object : PicturePagerAdapter.PictureInfoInterface{
                 override fun showDetail(photoEntity: PhotoEntity) {
-                    val action = MemoryDetailFragmentDirections.actionMemoryDetailFragmentToEditMemoryFragment(photoEntity)
+                    val action = MemoryDetailFragmentDirections.actionMemoryDetailFragmentToEditMemoryFragment(
+                            photoEntity
+                        )
                     findNavController().navigate(action)
                 }
             })
