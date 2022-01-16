@@ -19,7 +19,7 @@ import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 class EditPhotoFragment : Fragment(){
     private var binding by AutoClearedValue<FragmentEditMemoryBinding>()
     private val viewModel : EditPhotoViewModel by viewModels()
-    private val args : org.android.reminiscencewinter.presentation.memory.ui.EditPhotoFragmentArgs by navArgs()
+    private val args : EditPhotoFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,6 +36,7 @@ class EditPhotoFragment : Fragment(){
         loadNavArgs()
         popBackStack()
         editPhoto()
+        showSharingBottomSheet()
     }
     private fun loadNavArgs(){
         with(viewModel){
@@ -90,8 +91,12 @@ class EditPhotoFragment : Fragment(){
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
     }
-
-
+    private fun showSharingBottomSheet(){
+        binding.buttonShare.setOnClickListener {
+            val bottomSheetFragment = SharingBottomSheetFragment()
+            bottomSheetFragment.show(childFragmentManager, "Show Sharing Bottom Sheet")
+        }
+    }
 
 
 
