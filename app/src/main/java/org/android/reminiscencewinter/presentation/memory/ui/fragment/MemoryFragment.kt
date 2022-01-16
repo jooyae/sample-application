@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.presentation.memory.ui
+package org.android.reminiscencewinter.presentation.memory.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +11,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentMemoryBinding
 import org.android.reminiscencewinter.domain.model.AlbumEntity
 import org.android.reminiscencewinter.presentation.main.ui.MainFrameFragmentDirections
+import org.android.reminiscencewinter.presentation.memory.ui.adapter.MemoryAdapter
 import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 import org.android.reminiscencewinter.presentation.util.RecyclerviewSpacingDecoration

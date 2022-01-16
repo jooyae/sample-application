@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.presentation.memory.ui
+package org.android.reminiscencewinter.presentation.memory.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,14 +13,13 @@ import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentEditMemoryBinding
 import org.android.reminiscencewinter.presentation.memory.viewmodel.EditPhotoViewModel
-import org.android.reminiscencewinter.presentation.memory.viewmodel.MemoryDetailViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
 @AndroidEntryPoint
 class EditPhotoFragment : Fragment(){
     private var binding by AutoClearedValue<FragmentEditMemoryBinding>()
     private val viewModel : EditPhotoViewModel by viewModels()
-    private val args : EditPhotoFragmentArgs by navArgs()
+    private val args : org.android.reminiscencewinter.presentation.memory.ui.EditPhotoFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -91,6 +90,9 @@ class EditPhotoFragment : Fragment(){
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
     }
+
+
+
 
 
 }
