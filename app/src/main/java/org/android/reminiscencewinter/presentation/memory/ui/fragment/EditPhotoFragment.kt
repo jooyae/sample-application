@@ -37,6 +37,7 @@ class EditPhotoFragment : Fragment(){
         popBackStack()
         editPhoto()
         showSharingBottomSheet()
+        showDeletePhotoDialog()
     }
     private fun loadNavArgs(){
         with(viewModel){
@@ -98,6 +99,19 @@ class EditPhotoFragment : Fragment(){
         }
     }
 
+    private fun showDeletePhotoDialog(){
+        binding.buttonDelete.setOnClickListener {
+            val dialog = DeletePhotoDialog(object : DeletePhotoDialog.DeleteCallback {
+                override fun deletePhoto() {
+                    findNavController().previousBackStackEntry?.savedStateHandle?.set("DELETE_PHOTO", true)
+                    findNavController().popBackStack()
+                }
+                override fun exit() {
 
-
+                }
+            })
+            dialog.show(childFragmentManager,"삭제되었습니다.")
+            }
+        }
 }
+

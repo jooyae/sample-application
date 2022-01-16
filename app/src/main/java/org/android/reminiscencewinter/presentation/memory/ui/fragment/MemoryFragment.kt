@@ -50,4 +50,6 @@ class MemoryFragment : Fragment(){
             }
         }
     }
+
+
 }

@@ -38,6 +38,7 @@ class MemoryDetailFragment  : Fragment(){
 
         viewModel.updateAlbumInfo(args.photoInfo)
 
+        updateChanges()
         updatePhotos()
         loadAlbum()
     }
@@ -62,6 +63,17 @@ class MemoryDetailFragment  : Fragment(){
             addItemDecoration(RecyclerviewSpacingDecoration(14,2))
             viewModel.pictures.observe(viewLifecycleOwner){
                 (adapter as PicturePagerAdapter).submitData(lifecycle, it)
+            }
+        }
+    }
+
+    private fun updateChanges() {
+        findNavController().currentBackStackEntry?.savedStateHandle?.let {
+            it.getLiveData("DELETE_PHOTO", false).observe(viewLifecycleOwner) { isDeleted ->
+                if (isDeleted) {
+                    viewModel.deletePhoto()
+                    it.set("DELETE_PHOTO", false)
+                }
             }
         }
     }

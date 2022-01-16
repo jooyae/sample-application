@@ -18,6 +18,14 @@ import javax.inject.Inject
 class MemoryDetailViewModel @Inject constructor(
     private val getPhotoInfoUseCase: GetPhotoInfoUseCase
 ) : DisposableViewModel(){
+
+    private val _photoList = MutableLiveData<List<PhotoEntity>>()
+    val photoList : LiveData<List<PhotoEntity>>
+        get() = _photoList
+
+    private val _selectedPhoto = MutableLiveData<PhotoEntity>()
+    val selectedPhoto: LiveData<PhotoEntity> = _selectedPhoto
+
     private val _albumInfo = MutableLiveData<AlbumEntity>()
     val albumInfo : LiveData<AlbumEntity> = _albumInfo
 
@@ -41,6 +49,13 @@ class MemoryDetailViewModel @Inject constructor(
             },{
                 it.printStackTrace()
             })
+    }
+
+    fun deletePhoto(){
+        val originalPhotoList = photoList.value?.toMutableList()
+        val deleteTarget = originalPhotoList?.find { it.id == selectedPhoto.value?.id }
+        originalPhotoList?.remove(deleteTarget)
+        originalPhotoList?.let { _photoList.value = it }
     }
 
 }

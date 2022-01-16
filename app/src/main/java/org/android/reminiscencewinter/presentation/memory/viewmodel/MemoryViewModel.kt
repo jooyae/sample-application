@@ -20,6 +20,7 @@ class MemoryViewModel @Inject constructor(
     private val _albums = MutableLiveData<List<AlbumEntity>>(listOf())
     val albums: LiveData<List<AlbumEntity>> = _albums
 
+
     init {
         getAlbumInfo()
     }
@@ -41,6 +42,8 @@ class MemoryViewModel @Inject constructor(
                 })
         )
     }
+
+
 
 }
 
