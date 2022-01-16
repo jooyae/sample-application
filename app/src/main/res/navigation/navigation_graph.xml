@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_mainFrameFragment_to_memoryDetailFragment"
             app:destination="@id/memoryDetailFragment" />
+        <action
+            android:id="@+id/action_mainFrameFragment_to_editPhotoFragment"
+            app:destination="@id/editPhotoFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
