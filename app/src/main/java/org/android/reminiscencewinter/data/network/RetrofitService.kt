@@ -13,7 +13,6 @@ interface RetrofitService {
         @Query("limit") limit : Int
     ) : Single<List<Picsum>>
 
-
     @GET("/id/{id}/info")
     fun getSpecificPicture(
         @Path("id") id: Int
