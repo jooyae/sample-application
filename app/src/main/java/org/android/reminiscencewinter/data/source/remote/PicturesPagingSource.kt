@@ -16,14 +16,14 @@ class PicturesPagingSource(
     private var imageCount = 0
 
     override fun getRefreshKey(state: PagingState<Int, PhotoEntity>): Int? {
-        return state.anchorPosition?.let { anchorPosition ->
-            state.closestPageToPosition(anchorPosition)?.prevKey?.plus(1) ?:
-            state.closestPageToPosition(anchorPosition)?.nextKey?.minus(1)
+        return state.anchorPosition?.let {
+            state.closestPageToPosition(it)?.prevKey?.plus(1) ?:
+            state.closestPageToPosition(it)?.nextKey?.minus(1)
         }
     }
 
     override fun loadSingle(params: LoadParams<Int>): Single<LoadResult<Int, PhotoEntity>> {
-        val nextPage = params.key ?: 1
+        val nextPage = params.key ?: initPage
         val loadSize = if (totalImageLimit >= imageCount + size) {
             size
         } else {

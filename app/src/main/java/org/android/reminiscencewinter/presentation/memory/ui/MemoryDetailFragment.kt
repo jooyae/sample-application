@@ -38,7 +38,6 @@ class MemoryDetailFragment  : Fragment(){
         viewModel.updateAlbumInfo(args.photoInfo)
 
         updatePhotos()
-        updatePictures()
         loadAlbum()
     }
 
@@ -48,10 +47,6 @@ class MemoryDetailFragment  : Fragment(){
         }
     }
 
-    private fun updatePictures(){
-        viewModel.pictures.observe(viewLifecycleOwner)
-            { if(it != null){ viewModel.getPhotos() } }
-    }
 
     private fun loadAlbum(){
         binding.recyclerviewPictures.run{
@@ -61,7 +56,7 @@ class MemoryDetailFragment  : Fragment(){
                     findNavController().navigate(action)
                 }
             })
-            addItemDecoration(RecyclerviewSpacingDecoration(10,2))
+            addItemDecoration(RecyclerviewSpacingDecoration(14,2))
             viewModel.pictures.observe(viewLifecycleOwner){
                 (adapter as PicturePagerAdapter).submitData(lifecycle, it)
             }

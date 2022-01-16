@@ -17,7 +17,7 @@ class PicturePagerAdapter(private val listener : PictureInfoInterface)  : Paging
     }
     override fun onBindViewHolder(holder: PicturePagerViewHolder, position: Int) {
         val picture = getItem(position)
-        holder.binding.setVariable(BR.memory, picture)
+        holder.binding.setVariable(BR.data, picture)
         holder.binding.imageviewPhoto.setOnClickListener {
             if (picture != null) {
                 listener.showDetail(picture)
