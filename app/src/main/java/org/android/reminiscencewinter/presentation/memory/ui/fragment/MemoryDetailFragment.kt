@@ -49,7 +49,6 @@ class MemoryDetailFragment  : Fragment(){
         }
     }
 
-
     private fun loadAlbum(){
         binding.recyclerviewPictures.run{
             adapter = PicturePagerAdapter(object : PicturePagerAdapter.PictureInfoInterface{

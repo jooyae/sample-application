@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentEditMemoryBinding
+import org.android.reminiscencewinter.presentation.memory.ui.dialog.DeletePhotoDialog
 import org.android.reminiscencewinter.presentation.memory.viewmodel.EditPhotoViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
