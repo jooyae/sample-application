@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.presentation.memory.ui.fragment
+package org.android.reminiscencewinter.presentation.memory.ui.dialog
 
 import android.content.DialogInterface
 import android.os.Bundle

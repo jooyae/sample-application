@@ -9,6 +9,8 @@ import org.android.daangngallery.data.source.MemoryInfoDataSource
 import org.android.daangngallery.data.source.MemoryInfoDataSourceImpl
 import org.android.daangngallery.data.source.PicsumPhotoDataSource
 import org.android.daangngallery.data.source.PicsumPhotoDataSourceImpl
+import org.android.reminiscencewinter.data.source.StorageDataSource
+import org.android.reminiscencewinter.data.source.StorageDataSourceImpl
 import javax.inject.Singleton
 
 @Module
@@ -22,4 +24,8 @@ object DataSourceModule {
     @Singleton
     fun provideAlbumInfoDataSource(retrofitService: RetrofitService): MemoryInfoDataSource =
         MemoryInfoDataSourceImpl(retrofitService)
+    @Provides
+    @Singleton
+    fun provideStoragePhotoController(retrofitService: RetrofitService) : StorageDataSource =
+        StorageDataSourceImpl(retrofitService)
 }
