@@ -5,63 +5,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottie_story"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/camera" />
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textview_story_ment"
+        android:id="@+id/textview_album_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/album_ment"
-        android:layout_marginTop="8dp"
+        android:text="@string/album_title"
+        android:textSize="24sp"
+        android:fontFamily="@font/lobsterregular"
+        android:textColor="@color/black"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edittext_search_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/background_edit_text"
+        android:drawableEnd="@drawable/ic_search_icn_3x"
         android:fontFamily="@font/pretendardregular"
-        android:textColor="@color/grey8"
-        android:gravity="center"
-        android:lineSpacingExtra="4dp"
-        app:layout_constraintTop_toBottomOf="@id/lottie_story"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_camera"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginHorizontal="60dp"
-        android:text="@string/button_camera_text"
-        android:textColor="@color/white"
-        android:fontFamily="@font/pretendardsemibold"
-        android:drawableStart="@drawable/sharp_photo_camera_white_18"
-        android:drawablePadding="-60dp"
-        android:paddingStart="50dp"
-        android:background="@drawable/shape_black_button"
-        app:layout_constraintStart_toStartOf="parent"
+        android:hint="@string/search_photo_image"
+        android:inputType="text"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey7"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_story_ment"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginHorizontal="60dp"
-        android:text="@string/button_album_text"
-        android:textColor="@color/white"
-        android:fontFamily="@font/pretendardsemibold"
-        android:drawableStart="@drawable/sharp_photo_library_white_18"
-        android:drawablePadding="-60dp"
-        android:paddingStart="50dp"
-        android:background="@drawable/shape_black_button"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_camera"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_special_moment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/textview_special_moment"
+        android:fontFamily="@font/lobsterregular"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edittext_search_keyword"
+        app:layout_constraintStart_toStartOf="@id/edittext_search_keyword"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
