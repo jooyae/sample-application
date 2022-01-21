@@ -1,7 +1,7 @@
 package org.android.reminiscencewinter.domain.repository
 
 import io.reactivex.rxjava3.core.Single
-import org.android.daangngallery.data.source.PicsumPhotoDataSource
+import org.android.reminiscencewinter.data.source.local.PicsumPhotoDataSource
 import org.android.reminiscencewinter.domain.model.GalleryEntity
 import org.android.reminiscencewinter.domain.model.PhotoEntity
 import javax.inject.Inject

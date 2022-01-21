@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.presentation.storage.ui
+package org.android.reminiscencewinter.presentation.storage.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.navGraphViewModels
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentStorageBinding
+import org.android.reminiscencewinter.presentation.storage.ui.adapter.StorageAdapter
 import org.android.reminiscencewinter.presentation.storage.viewmodel.StorageViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 import org.android.reminiscencewinter.presentation.util.RecyclerviewSpacingDecoration

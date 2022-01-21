@@ -14,7 +14,7 @@ import org.android.reminiscencewinter.presentation.album.AlbumFragment
 import org.android.reminiscencewinter.databinding.FragmentMainFrameBinding
 import org.android.reminiscencewinter.presentation.main.viewmodel.MainFrameViewModel
 import org.android.reminiscencewinter.presentation.memory.ui.fragment.MemoryFragment
-import org.android.reminiscencewinter.presentation.storage.ui.StorageFragment
+import org.android.reminiscencewinter.presentation.storage.ui.fragment.StorageFragment
 import org.android.reminiscencewinter.presentation.story.StoryFragment
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 
