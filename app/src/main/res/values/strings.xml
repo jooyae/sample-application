@@ -13,4 +13,7 @@
     <string name="photo_brightness">채도 조절</string>
     <string name="photo_contrast">명암 조절</string>
     <string name="storage_title">Storage</string>
+    <string name="album_ment">스토리를 만들고, 내 하루하루를 한편의 이야기로\n만나보세요.</string>
+    <string name="button_camera_text">카메라</string>
+    <string name="button_album_text">갤러리</string>
 </resources>

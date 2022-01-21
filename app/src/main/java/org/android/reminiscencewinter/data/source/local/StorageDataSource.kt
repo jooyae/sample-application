@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.data.source
+package org.android.reminiscencewinter.data.source.local
 
 import io.reactivex.rxjava3.core.Single
 import org.android.reminiscencewinter.data.dto.Photo

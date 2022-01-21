@@ -5,12 +5,12 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import org.android.daangngallery.data.network.RetrofitService
-import org.android.daangngallery.data.source.MemoryInfoDataSource
-import org.android.daangngallery.data.source.MemoryInfoDataSourceImpl
-import org.android.daangngallery.data.source.PicsumPhotoDataSource
-import org.android.daangngallery.data.source.PicsumPhotoDataSourceImpl
-import org.android.reminiscencewinter.data.source.StorageDataSource
-import org.android.reminiscencewinter.data.source.StorageDataSourceImpl
+import org.android.reminiscencewinter.data.source.local.MemoryInfoDataSource
+import org.android.reminiscencewinter.data.source.local.MemoryInfoDataSourceImpl
+import org.android.reminiscencewinter.data.source.local.PicsumPhotoDataSource
+import org.android.reminiscencewinter.data.source.local.PicsumPhotoDataSourceImpl
+import org.android.reminiscencewinter.data.source.local.StorageDataSource
+import org.android.reminiscencewinter.data.source.local.StorageDataSourceImpl
 import javax.inject.Singleton
 
 @Module

@@ -1,9 +1,8 @@
-package org.android.reminiscencewinter.presentation.storage.ui
+package org.android.reminiscencewinter.presentation.storage.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.android.reminiscencewinter.BR
 import org.android.reminiscencewinter.databinding.ItemStorageBinding
