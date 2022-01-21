@@ -10,7 +10,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.*
-import org.android.reminiscencewinter.presentation.album.AlbumFragment
+import org.android.reminiscencewinter.presentation.album.fragment.AlbumFragment
 import org.android.reminiscencewinter.databinding.FragmentMainFrameBinding
 import org.android.reminiscencewinter.presentation.main.viewmodel.MainFrameViewModel
 import org.android.reminiscencewinter.presentation.memory.ui.fragment.MemoryFragment
