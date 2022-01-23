@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.di.modules
+package org.android.reminiscencewinter.di
 
 import dagger.Module
 import dagger.Provides
