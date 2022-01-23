@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.data.source.local
+package org.android.reminiscencewinter.data.source.local.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

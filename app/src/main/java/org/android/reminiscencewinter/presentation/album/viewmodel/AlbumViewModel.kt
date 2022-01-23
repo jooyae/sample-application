@@ -27,7 +27,7 @@ class AlbumViewModel @Inject constructor(
     fun getPhotos(){
         getPhotoInfoUseCase(
             albumInfo.value?.albumId?:0,
-            20,
+            10,
             albumInfo.value?.imageCount ?:0
         ).subscribeOn(Schedulers.io())
             .cachedIn(viewModelScope)
@@ -38,5 +38,7 @@ class AlbumViewModel @Inject constructor(
                 it.printStackTrace()
             })
     }
+
+
 
 }

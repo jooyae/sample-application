@@ -26,6 +26,16 @@ object BindingAdapter {
     }
 
     @JvmStatic
+    @BindingAdapter("loadCircleImageUrl")
+    fun ImageView.loadCircleImageUrl(url: String?) {
+        url?.let {
+            load(it){
+                transformations(CircleCropTransformation())
+            }
+        }
+    }
+
+    @JvmStatic
     @BindingAdapter("corner_radius")
     fun ShapeableImageView.setCornerRadius(radius: Float) {
     shapeAppearanceModel = ShapeAppearanceModel().withCornerSize(radius)

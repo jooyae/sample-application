@@ -19,4 +19,5 @@
     <string name="search_photo_image">당신의 추억을 검색해보세요.</string>
     <string name="album_title">Search</string>
     <string name="textview_special_moment">Special Moment</string>
+    <string name="textview_people">People</string>
 </resources>

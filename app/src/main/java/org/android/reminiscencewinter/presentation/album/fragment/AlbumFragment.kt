@@ -9,7 +9,8 @@ import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import org.android.reminiscencewinter.databinding.FragmentAlbumBinding
 import org.android.reminiscencewinter.domain.model.PhotoEntity
-import org.android.reminiscencewinter.presentation.album.adapter.AlbumAdapter
+import org.android.reminiscencewinter.presentation.album.adapter.AlbumPagerAdapter
+import org.android.reminiscencewinter.presentation.album.adapter.PeoplePagerAdapter
 import org.android.reminiscencewinter.presentation.album.viewmodel.AlbumViewModel
 import org.android.reminiscencewinter.presentation.util.AutoClearedValue
 import org.android.reminiscencewinter.presentation.util.RecyclerviewSpacingDecoration
@@ -32,22 +33,32 @@ class AlbumFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
-        loadSpecailMoment()
+        loadSpeciallMoment()
+        showSpecialPeople()
+        viewModel.getPhotos()
     }
 
-    private fun loadSpecailMoment(){
+    private fun loadSpeciallMoment(){
         binding.recyclerviewSearchPhoto.run {
-            adapter = AlbumAdapter(object : AlbumAdapter.OnItemClickListener{
+            adapter = AlbumPagerAdapter(object : AlbumPagerAdapter.OnItemClickListener{
                 override fun itemClick(view: View, photoEntity: PhotoEntity) {
 
                 }
             })
             addItemDecoration(RecyclerviewSpacingDecoration(10,1))
             viewModel.pictures.observe(viewLifecycleOwner){
-                (adapter as AlbumAdapter).submitData(lifecycle, it)
+                (adapter as AlbumPagerAdapter).submitData(lifecycle, it)
             }
         }
     }
 
-
+    private fun showSpecialPeople(){
+        binding.recyclerviewPeoplePhoto.run {
+            adapter = PeoplePagerAdapter()
+            addItemDecoration(RecyclerviewSpacingDecoration(14,1))
+            viewModel.pictures.observe(viewLifecycleOwner){
+                (adapter as PeoplePagerAdapter).submitData(lifecycle, it)
+            }
+        }
+    }
 }

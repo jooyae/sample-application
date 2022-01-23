@@ -1,9 +1,9 @@
-package org.android.reminiscencewinter.data.source.local
+package org.android.reminiscencewinter.data.source.local.storage
 
 import io.reactivex.rxjava3.core.Single
 import org.android.daangngallery.data.network.RetrofitService
 import org.android.reminiscencewinter.data.dto.Photo
-import org.android.reminiscencewinter.data.source.local.StorageDataSource
+import org.android.reminiscencewinter.data.source.local.storage.StorageDataSource
 import javax.inject.Inject
 
 class StorageDataSourceImpl @Inject constructor(
