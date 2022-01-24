@@ -1,9 +1,9 @@
-package org.android.reminiscencewinter.data.source.local.memory
+package org.android.reminiscencewinter.data.source.remote
 
 import io.reactivex.rxjava3.core.Single
 import org.android.daangngallery.data.network.RetrofitService
 import org.android.daangngallery.data.dto.Album
-import org.android.reminiscencewinter.data.source.local.memory.MemoryInfoDataSource
+import org.android.reminiscencewinter.data.source.remote.MemoryInfoDataSource
 import javax.inject.Inject
 
 class MemoryInfoDataSourceImpl @Inject constructor(

@@ -1,7 +1,7 @@
 package org.android.reminiscencewinter.data.repository
 
 import io.reactivex.rxjava3.core.Single
-import org.android.reminiscencewinter.data.source.local.paging.PicsumPhotoDataSource
+import org.android.reminiscencewinter.data.source.remote.paging.PicsumPhotoDataSource
 import org.android.reminiscencewinter.domain.model.GalleryEntity
 import org.android.reminiscencewinter.domain.model.PhotoEntity
 import org.android.reminiscencewinter.domain.repository.PicsumRepository

@@ -9,8 +9,8 @@ import org.android.reminiscencewinter.data.repository.MemoryRepositoryImpl
 import org.android.reminiscencewinter.data.repository.PhotoRepositoryImpl
 import org.android.reminiscencewinter.data.repository.PicsumRepositoryImpl
 import org.android.reminiscencewinter.data.repository.StorageRepositoryImpl
-import org.android.reminiscencewinter.data.source.local.memory.MemoryInfoDataSource
-import org.android.reminiscencewinter.data.source.local.paging.PicsumPhotoDataSource
+import org.android.reminiscencewinter.data.source.remote.MemoryInfoDataSource
+import org.android.reminiscencewinter.data.source.remote.paging.PicsumPhotoDataSource
 import org.android.reminiscencewinter.domain.repository.*
 import javax.inject.Singleton
 
