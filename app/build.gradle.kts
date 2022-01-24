@@ -95,7 +95,7 @@ dependencies {
 
     //Room
     implementation(AndroidX.Room.ROOM_KTX)
-    implementation(AndroidX.Room.ROOM_COMPILER)
+    kapt(AndroidX.Room.ROOM_COMPILER)
     implementation(AndroidX.Room.ROOM_RUNTIME)
     implementation(AndroidX.Room.ROOM_RXJAVA2)
 }

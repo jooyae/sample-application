@@ -27,7 +27,7 @@ abstract class PicsumRoomDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     PicsumRoomDatabase::class.java,
-                    "picsum_database"
+                    "PicsumRoomDatabase"
                 ).build()
                 INSTANCE = instance
                 return instance
