@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.data.source.local.memory
+package org.android.reminiscencewinter.data.source.remote
 
 import io.reactivex.rxjava3.core.Single
 import org.android.daangngallery.data.dto.Album

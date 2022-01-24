@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.data.source.local.paging
+package org.android.reminiscencewinter.data.source.remote.paging
 
 import io.reactivex.rxjava3.core.Single
 import org.android.daangngallery.data.dto.Picsum

@@ -49,9 +49,9 @@ dependencies {
     implementation(AndroidX.APPCOMPAT)
     implementation (AndroidX.CONSTRAINT_LAYOUT)
     implementation (Google.MATERIAL)
-    implementation ("androidx.multidex:multidex:2.0.1")
-//    implementation(AndroidX.COMPOSE_MATERIAL)
-//    androidTestImplementation(AndroidX.COMPOSE)
+    implementation(AndroidX.COMPOSE_MATERIAL)
+    androidTestImplementation(AndroidX.COMPOSE)
+
     testImplementation(Test.JUNIT)
     androidTestImplementation(Test.AndroidTest.JUNIT_EXT)
     androidTestImplementation(Test.AndroidTest.ESPRESSO_CORE)
@@ -92,4 +92,10 @@ dependencies {
     implementation(Lorem.LOREM_IPSUM)
     implementation(AndroidX.Paging.PAGING)
     implementation(AndroidX.Paging.PAGING_RXJAVA3)
+
+    //Room
+    implementation(AndroidX.Room.ROOM_KTX)
+    implementation(AndroidX.Room.ROOM_COMPILER)
+    implementation(AndroidX.Room.ROOM_RUNTIME)
+    implementation(AndroidX.Room.ROOM_RXJAVA2)
 }
