@@ -22,7 +22,7 @@ object DependencyVersions {
     const val NAVIGATION_VERSION = "2.3.5"
 
     //Room
-    const val ROOM_VERSION = "2.4.0-alpha03"
+    const val ROOM_VERSION = "2.4.1"
 
     //Lifecycle
     const val LIFECYCLE_VERSION = "2.3.1"
