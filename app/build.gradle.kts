@@ -43,59 +43,67 @@ android {
 
 dependencies {
     implementation(Kotlin.KOTLIN_STDLIBS)
+    implementation (Google.MATERIAL)
     implementation(AndroidX.CORE_KTX)
     implementation(AndroidX.FRAGMENT_KTX)
     implementation(AndroidX.ACTIVITY_KTX)
     implementation(AndroidX.APPCOMPAT)
     implementation (AndroidX.CONSTRAINT_LAYOUT)
-    implementation (Google.MATERIAL)
     implementation(AndroidX.COMPOSE_MATERIAL)
     androidTestImplementation(AndroidX.COMPOSE)
 
+    //test
     testImplementation(Test.JUNIT)
     androidTestImplementation(Test.AndroidTest.JUNIT_EXT)
     androidTestImplementation(Test.AndroidTest.ESPRESSO_CORE)
 
+    //hilt
     implementation(DaggerHilt.HILT_ANDROID)
     kapt(DaggerHilt.HILT_ANDROID_COMPILER)
 
+    //lifecycle
     implementation(AndroidX.Lifecycle.VIEWMODEL)
     implementation(AndroidX.Lifecycle.LIVEDATA)
 
+    //rx
     implementation(ReactiveX.RX_JAVA)
     implementation(ReactiveX.RX_ANDROID)
 
+    //navigation
     implementation(AndroidX.Navigation.NAVIGATION_FRAGMENT_KTX)
     implementation(AndroidX.Navigation.NAVIGATION_UI_KTX)
 
-
-    //OkHttp Logging Interceptor
+    //retrofit
     implementation(Square.OKHTTP_LOGGING_INTERCEPTOR)
-
     implementation(Square.RETROFIT)
     implementation(Square.CONVERTER_GSON)
     implementation(Square.ADAPTER_RXJAVA)
     implementation(Square.GSON)
 
-    //Coil
+    //coil
     implementation(Coil.COIL)
 
-    //Paging3
+    //paging
     implementation(Paging3.Paging3)
-
-    //Kakao
-    implementation(KakaoSDK.V2_USER)
-
-    //Lottie
-    implementation(Lottie.LOTTIE)
-
-    implementation(Lorem.LOREM_IPSUM)
     implementation(AndroidX.Paging.PAGING)
     implementation(AndroidX.Paging.PAGING_RXJAVA3)
 
-    //Room
+    //kakao
+    implementation(KakaoSDK.V2_USER)
+
+    //lottie
+    implementation(Lottie.LOTTIE)
+
+    //lorem
+    implementation(Lorem.LOREM_IPSUM)
+
+    //room
     implementation(AndroidX.Room.ROOM_KTX)
     kapt(AndroidX.Room.ROOM_COMPILER)
     implementation(AndroidX.Room.ROOM_RUNTIME)
     implementation(AndroidX.Room.ROOM_RXJAVA2)
+
+    //logger
+    implementation(Timber.TIMBER)
+
 }

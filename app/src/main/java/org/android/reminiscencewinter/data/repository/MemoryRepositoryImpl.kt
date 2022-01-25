@@ -1,7 +1,7 @@
 package org.android.reminiscencewinter.data.repository
 
 import io.reactivex.rxjava3.core.Single
-import org.android.reminiscencewinter.data.source.remote.MemoryInfoDataSource
+import org.android.reminiscencewinter.data.source.remote.memory.MemoryInfoDataSource
 import org.android.reminiscencewinter.domain.model.AlbumEntity
 import org.android.reminiscencewinter.domain.repository.MemoryRepository
 import javax.inject.Inject
