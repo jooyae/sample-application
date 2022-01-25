@@ -4,11 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import kotlinx.coroutines.CoroutineScope
 
 @Database(
     entities = [Picsum::class],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
 abstract class PicsumRoomDatabase : RoomDatabase() {
     abstract fun picsumDao() : PicsumDao
@@ -17,17 +18,13 @@ abstract class PicsumRoomDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE : PicsumRoomDatabase ? = null
 
-        fun getDataBase(context : Context) : PicsumRoomDatabase{
-            val tempInstance = INSTANCE
-
-            if(tempInstance != null){
-                return tempInstance
-            }
+        fun getDataBase(context : Context, scope : CoroutineScope) : PicsumRoomDatabase{
+            return INSTANCE ?:
             synchronized(this){
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     PicsumRoomDatabase::class.java,
-                    "PicsumRoomDatabase"
+                    "picsum_table"
                 ).build()
                 INSTANCE = instance
                 return instance
