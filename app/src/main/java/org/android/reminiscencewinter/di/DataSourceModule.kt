@@ -5,8 +5,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import org.android.daangngallery.data.network.RetrofitService
-import org.android.reminiscencewinter.data.source.remote.MemoryInfoDataSource
-import org.android.reminiscencewinter.data.source.remote.MemoryInfoDataSourceImpl
+import org.android.reminiscencewinter.data.source.remote.memory.MemoryInfoDataSource
+import org.android.reminiscencewinter.data.source.remote.memory.MemoryInfoDataSourceImpl
 import org.android.reminiscencewinter.data.source.remote.paging.PicsumPhotoDataSource
 import org.android.reminiscencewinter.data.source.remote.paging.PicsumPhotoDataSourceImpl
 import org.android.reminiscencewinter.data.source.remote.storage.StorageDataSource

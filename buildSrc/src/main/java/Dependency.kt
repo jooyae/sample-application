@@ -114,6 +114,10 @@ object Lottie{
     const val LOTTIE = "com.airbnb.android:lottie:${DependencyVersions.LOTTIE}"
 }
 
+object Timber {
+    const val TIMBER = "com.jakewharton.timber:timber:${DependencyVersions.TIMBER}"
+}
+
 object Annotations {
     const val SUPPORT_ANNOTATIONS = "com.android.support:support-annotations:${DependencyVersions.ANNOTATION_VERSION}"
 }

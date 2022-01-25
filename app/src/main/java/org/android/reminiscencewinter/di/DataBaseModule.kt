@@ -12,7 +12,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RoomModule {
+object DataBaseModule {
     @Provides
     @Singleton
     fun provideRoomDatabase(@ApplicationContext context: Context) : PicsumRoomDatabase {

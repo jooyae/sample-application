@@ -69,6 +69,7 @@ object DependencyVersions {
     const val EMOJI_VERSION = "28.0.0"
 
     const val LOTTIE = "3.4.0"
+    const val TIMBER = "5.0.1"
 }
 
 object TestVersions {
