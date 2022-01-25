@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
+import org.android.reminiscencewinter.data.source.local.Picsum
 import org.android.reminiscencewinter.databinding.FragmentStorageBinding
 import org.android.reminiscencewinter.presentation.storage.ui.adapter.StorageAdapter
 import org.android.reminiscencewinter.presentation.storage.viewmodel.StorageViewModel
@@ -33,6 +34,13 @@ class StorageFragment : Fragment() {
         binding.viewModel = viewModel
         viewModel.getStorage()
         loadStorage()
+        updateStorageRoom()
+    }
+
+    private fun updateStorageRoom(){
+        viewModel.allPicsum.observe(viewLifecycleOwner) {
+            viewModel.getStorage()
+        }
     }
 
     private fun loadStorage() {

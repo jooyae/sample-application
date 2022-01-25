@@ -1,4 +1,4 @@
-package org.android.reminiscencewinter.data.mapper
+package org.android.reminiscencewinter.data.mapper.dto
 
 
 import com.google.gson.annotations.SerializedName
