@@ -1,10 +1,8 @@
 package org.android.reminiscencewinter.data.repository
 
 import androidx.annotation.WorkerThread
-import androidx.lifecycle.LiveData
 import kotlinx.coroutines.flow.Flow
 import org.android.reminiscencewinter.data.source.local.Picsum
-import org.android.reminiscencewinter.data.source.local.PicsumDao
 import org.android.reminiscencewinter.data.source.local.PicsumRoomDatabase
 import javax.inject.Inject
 

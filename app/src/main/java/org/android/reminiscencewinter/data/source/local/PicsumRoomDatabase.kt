@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import kotlinx.coroutines.CoroutineScope
+import org.android.reminiscencewinter.data.source.local.dao.PicsumDao
 
 @Database(
     entities = [Picsum::class],
