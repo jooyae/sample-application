@@ -10,7 +10,7 @@
 
 ## Base Code
 
-<h5 align="left"> Single Activity- Mutliple Fragment
+<h5 align="left"> Single Activity- Mutiple Fragment
 <h5 align="left"> UI navigate Navigation Component
 <h5 align="left">  Dagger Hilt for Dependencies Injection 
 
