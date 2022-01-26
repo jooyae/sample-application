@@ -1,7 +1,8 @@
-package org.android.reminiscencewinter.data.source.local
+package org.android.reminiscencewinter.data.source.local.dao
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
+import org.android.reminiscencewinter.data.source.local.Picsum
 
 @Dao
 interface PicsumDao{
