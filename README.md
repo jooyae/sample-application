@@ -1,6 +1,6 @@
 
 ## Android Studio IDE Setup 
-<h4 align="left"> Development : At least Arctic Fox Version, Kotlin DSL
+<h4 align="left"> Development : At least Arctic Fox Version, Migrate to Kotlin DSL
 </h4 align ="left">
 
 ## Architecture Design
