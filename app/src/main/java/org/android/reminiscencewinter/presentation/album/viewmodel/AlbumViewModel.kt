@@ -38,7 +38,4 @@ class AlbumViewModel @Inject constructor(
                 it.printStackTrace()
             })
     }
-
-
-
 }
